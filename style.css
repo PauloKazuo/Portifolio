@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: #ffffff;
+}
+
+.section {
+    padding: 100px 0;
+    padding-left: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    margin-left: 50px;
+}
+
+ul {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.principal {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    min-height: 85vh;
+}
+
+.principal h1 {
+    font-size: 110px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -3px;
+}
+
+.principal h1 span {
+    color: #ff3c00;
+}
+
+.principal p {
+    font-size: 25px;
+    margin-bottom: 60px;
+    max-width: 650px;
+    color: #bbb;
+}
+
+.button {
+    display: inline-block;
+    padding: 20px 60px;
+    background-color: #fb3a01;
+    color: #15191f;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 22px;
+box-shadow: -2px 4px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+    font-size: 42px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    /* sempre que usar o before ou o after é obrigatório colocar o content */
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 100px;
+    height: 4px;
+    background-color: #ff3c00;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: #161616;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.project-info a {
+    color: #ff3c00;
+    font-weight: 500;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    max-width: 1400px;
+}
+
+.about-image {
+    height: 600px;
+    background-color: #161616;
+    border-radius: 10px;
+}
+
+.content-about h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+.content-about p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+.habilities {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-habilidades {
+    background-color: rgba(255, 60, 0, 0.2);
+    color: #ff3c00;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.contact-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    font-weight: 500;
+    border-radius: 10px;
+    min-width: 160px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.github {
+    background-color: #181717;
+}
+
+.email {
+    background-color: #ea4335;
+}
+
+footer {
+    padding: 20px 5%;
+    text-align: center;
+    border-top: 1px solid #222;
+    background-color: rgba(33, 37, 43, 0.8);
+}
+
+.efeito-cursor {
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+}
+
+.efeito-cursor:hover {
+    transform: translateY(-10px);
+}
+
+.cursor {
+    position: fixed;
+    pointer-events: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(255, 60, 0, 0.5);
+    z-index: 99;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.background-image img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(17, 19, 22, 0.85) 35%, rgba(17, 19, 22, 0.65) 50%, rgba(17, 19, 22, 0.85) 65%);
+    z-index: -1;
+}
+
+@media (max-width: 1024px) {
+
+}
+    
+
+@media (max-width:685px) {
+    header {
+        padding: 20px;
+    }
+
+    ul {
+        gap: 20px;
+        justify-content: flex-start;
+    }
+
+    .principal h1 {
+        font-size: 55px;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+    .about {
+        grid-template-columns: 1fr;
+    }
+    .about-image {
+        height: auto;
+    }
+}
+
